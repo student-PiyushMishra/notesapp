@@ -13,9 +13,14 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.get("/",(req,res)=>{
-    fs.readdir("./texts",function(err,files){
-        res.render('index',{files:files});
-    })
+    fs.readdir("./texts", function (err, files) {
+        if (err) {
+          console.error("Error reading directory:", err);
+          return res.status(500).send("Error reading directory");
+        }
+        res.render('index', { files: files });
+      });
+      
 })
 
 app.post("/create",(req,res)=>{
@@ -47,4 +52,7 @@ app.get("/file/:filename",(req,res)=>{
     });
 })
 
-app.listen(3000)
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
