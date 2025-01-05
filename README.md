@@ -18,6 +18,7 @@ Start by cloning this repository to your local machine:
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
+```
 
 ### 2. Install dependencies
 
@@ -27,3 +28,4 @@ Run the following command to install the required packages:
 
 ```bash
 npm install
+```
