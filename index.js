@@ -52,7 +52,20 @@ app.get("/file/:filename",(req,res)=>{
     });
 })
 
+const directoryPath = path.join(__dirname, "texts");
+console.log("Directory path:", directoryPath);
+
+fs.readdir(directoryPath, function(err, files) {
+  if (err) {
+    console.error("Error reading directory:", err);
+    return res.status(500).send("Error reading directory");
+  }
+  res.render("index", { files: files });
+});
+
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
