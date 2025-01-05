@@ -18,3 +18,11 @@ Start by cloning this repository to your local machine:
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
+### 2. Install dependencies
+
+As `node_modules` is not pushed to GitHub, you need to install the dependencies manually.
+
+Run the following command to install the required packages:
+
+```bash
+npm install
