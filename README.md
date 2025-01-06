@@ -16,8 +16,8 @@ Before you begin, make sure you have the following installed:
 Start by cloning this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/student-PiyushMishra/notesapp.git
+cd notesapp
 ```
 
 ### 2. Install dependencies
